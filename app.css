@@ -1,0 +1,21 @@
+html,
+body {
+  background-color: #f9fafc;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.search_bar {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  height: 60px;
+  display: flex;
+}
