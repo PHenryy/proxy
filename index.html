@@ -10,14 +10,27 @@
   <body>
     <div class="" id="app">
       <div class="search_bar">
-        <select name="proxy_source" class="" id="proxy_source">
-          <option value="https://gamedun.github.io" selected>https://gamedun.github.io/</option>
-          <option value="https://proxy.fan.workers.dev">https://proxy.fan.workers.dev</option>
-          <option value="https://js.jimmytinsley.workers.dev">https://js.jimmytinsley.workers.dev</option>
-          <option value="https://pikaqiu.pikaqiu1.workers.dev">https://pikaqiu.pikaqiu1.workers.dev</option>
-        </select>
-        <input type="text" id="search_input" />
-        <button class="button_go">出发</button>
+        <div class="search_controls">
+          <div class="select_control">
+            <div class="select">
+              <span class="option_selected">https://pikaqiu.pikaqiu1.workers.dev</span>
+              <div class="icon icon_down">
+                <img src="./images/chevron-bottom.svg" alt="" />
+              </div>
+            </div>
+            <ul class="select_options" id="proxy_source">
+              <li class="select_option" value="https://gamedun.github.io" data-proxy="true">https://gamedun.github.io/</li>
+              <li class="select_option" value="https://proxy.fan.workers.dev" data-proxy="true">https://proxy.fan.workers.dev</li>
+              <li class="select_option" value="https://js.jimmytinsley.workers.dev" data-proxy="true">https://js.jimmytinsley.workers.dev</li>
+              <li class="select_option select_option-selected" value="https://pikaqiu.pikaqiu1.workers.dev" data-proxy="true" selected>https://pikaqiu.pikaqiu1.workers.dev</li>
+              <li class="select_option" value="https://baidu.com" data-proxy="false">https://baidu.com</li>
+            </ul>
+          </div>
+          <input type="text" id="search_input" placeholder="search ..." />
+          <button class="button_go">
+            <img src="./images/search.svg" alt="" />
+          </button>
+        </div>
       </div>
     </div>
     <script src="./main.js"></script>

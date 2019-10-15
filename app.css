@@ -1,9 +1,10 @@
 html,
 body {
-  background-color: #f9fafc;
+  background-color: #2c3242;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  font-family: sans-serif;
 }
 
 #app {
@@ -12,10 +13,145 @@ body {
   height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .search_bar {
   margin: auto;
-  background-color: #fff;
   position: relative;
-  height: 60px;
   display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.select_control {
+  position: relative;
+}
+
+.select {
+  width: 200px;
+  height: 48px;
+  background-color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 36px 0 16px;
+}
+
+.select .option_selected {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-size: 14px;
+  line-height: 48px;
+}
+
+.select .icon {
+  position: absolute;
+  width: 36px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+}
+
+.select .icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.select_options {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  /* width: 100%; */
+  top: 100%;
+  left: 0;
+  padding: 12px 0px;
+  list-style: none;
+  margin-top: 6px;
+  border-radius: 2px;
+  transition: 0.3s ease-out;
+  transform: translateY(-20px);
+}
+
+.select_options-visible {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.select_option {
+  line-height: 36px;
+  padding-left: 16px;
+  padding-right: 48px;
+  cursor: pointer;
+  position: relative;
+  color: #999;
+}
+
+.select_option-selected {
+  color: #666;
+}
+
+.select_option-selected::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  right: 16px;
+  top: 0;
+  background-image: url("./images/check-mark.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center center;
+}
+
+.select_option:hover {
+  background-color: #e6edff;
+}
+
+.search_controls {
+  display: flex;
+  align-items: center;
+}
+
+#proxy_source {
+  border: none;
+  outline: none;
+  color: #333;
+  background-color: #fff;
+}
+
+#search_input {
+  width: 500px;
+  height: 48px;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  color: #333;
+  background-color: #fff;
+}
+
+.button_go {
+  background-color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_go img {
+  width: 16px;
+  height: 16px;
 }
